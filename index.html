@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAVBAR SECTION -->
+    <nav class=" backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-2xl ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <span
+                        class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                        DEV.PRADUM
+                    </span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-white hover:text-purple-600 transition-colors font-medium">Home</a>
+                    <a href="#about" class="text-white hover:text-purple-600 transition-colors font-medium">About </a>
+
+                    <a href="#Skills" class="text-white hover:text-purple-600 transition-colors font-medium">Skills</a>
+                    <a href="#my-services"
+                        class="text-white hover:text-purple-600 transition-colors font-medium">Services</a>
+                    <a href="#latest-projects"
+                        class="text-white hover:text-purple-600 transition-colors font-medium">projects</a>
+                    <a href="#" class="text-white hover:text-purple-600 transition-colors font-medium">Achievement</a>
+                    <a href="#contact-us"><button
+                            class="px-6 py-2 bg-indigo-600 text-white rounded-full font-semibold hover:shadow-lg transition-all">
+                            Contact Me
+                        </button></a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-600 focus:outline-none p-2">
+                        <svg id="menu-icon" class="h-8 w-8 transition-transform duration-300" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden  border-t border-gray-100 transition-all duration-300">
+            <div class=" flex flex-col px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="text-white hover:text-purple-600 transition-colors font-medium">Home</a>
+                <a href="#about" class="text-white hover:text-purple-600 transition-colors font-medium">About </a>
+
+                <a href="#Skills" class="text-white hover:text-purple-600 transition-colors font-medium">Skills</a>
+                <a href="#my-services"
+                    class="text-white hover:text-purple-600 transition-colors font-medium">Services</a>
+                <a href="#latest-projects"
+                    class="text-white hover:text-purple-600 transition-colors font-medium">projects</a>
+                <a href="#" class="text-white hover:text-purple-600 transition-colors font-medium">Achievement</a>
+
+                <a href="#contact-us"><button
+                        class="px-6 py-2 bg-indigo-600 text-white rounded-full font-semibold hover:shadow-lg transition-all">
+                        Contact Me
+                    </button></a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            // Menu ko open/close karne ke liye 'hidden' class toggle karein
+            menu.classList.toggle('hidden');
+
+            // Animation effect ke liye icon ko rotate karein (Optional)
+            icon.classList.toggle('rotate-90');
+        });
+    </script>
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative  overflow-hidden min-h-screen flex items-center">
+
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="dotPattern" patternUnits="userSpaceOnUse" width="32" height="32">
+                        <circle cx="1" cy="1" r="1" fill="#4f46e5" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#dotPattern)" />
+            </svg>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-6 py-24 md:py-32 lg:py-40 z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+
+                <div class="md:col-span-7 text-center md:text-left order-2 md:order-1">
+
+                    <div
+                        class="animate-fadeInUp inline-flex items-center px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 mb-8 shadow-sm">
+                        <span class="relative flex h-2 w-2 mr-2.5">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                        </span>
+                        <span class="text-sm font-medium text-indigo-700">Available for new opportunities</span>
+                    </div>
+
+                    <h1
+                        class="animate-fadeInUp delay-100 text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-gray-950 mb-6 leading-[1.15]">
+                        Building <span
+                            class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">pixel-perfect</span>
+                        digital experiences.
+                    </h1>
+
+                    <p
+                        class="animate-fadeInUp delay-200 text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl font-light leading-relaxed">
+                        I’m <span class="font-semibold text-gray-800">Pradum Gaun</span>, a passionate full-stack
+                        developer
+                        specialized in crafting modern, performant, and user-centric web applications that drive impact.
+                    </p>
+
+                    <div
+                        class="animate-fadeInUp delay-300 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6 mb-12 md:mb-0">
+                        <a href="#projects"
+                            class="group relative inline-flex items-center justify-center px-10 py-4 bg-gray-950 text-white rounded-full font-semibold text-lg shadow-xl shadow-gray-200 hover:bg-gray-800 transition-all duration-300 w-full sm:w-auto hover:-translate-y-1">
+                            Explore My Work
+                            <svg class="w-5 h-5 ml-2.5 group-hover:translate-x-1 transition-transform" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                        <a href="#contact"
+                            class="inline-flex items-center justify-center px-10 py-4 text-lg font-medium text-gray-700 rounded-full border border-gray-200 hover:border-gray-300 hover:bg-white transition-all w-full sm:w-auto hover:shadow-md">
+                            Let’s Connect
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="animate-scaleIn delay-500 md:col-span-5 flex justify-center items-center order-1 md:order-2">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200">
+                        </div>
+
+                        <img src="/images/colorphoto.png" alt="Pradum Gaun"
+                            class="relative w-100 h-100 md:w-100 md:h-100 object-cover rounded-full shadow-2xl border-4 border-white transition-transform duration-500 group-hover:scale-105"data-aos="zoom-in"data-aos-duration="1500">
+                    </div>
+                </div>
+
+            </div>
+
+            <div
+                class="animate-fadeInUp delay-500 absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40 hover:opacity-100 transition-opacity cursor-pointer hidden md:block">
+                <svg class="w-7 h-7 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
+
+        </div>
+
+        <div
+            class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/4 w-96 h-96 bg-indigo-200/40 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div
+            class="absolute top-0 right-0 translate-x-1/4 w-96 h-96 bg-purple-200/30 rounded-full blur-[120px] pointer-events-none">
+        </div>
+
+    </section>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="relative py-24  overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="mb-16 text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    About <span class="text-indigo-600">Me</span>
+                </h2>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full mx-auto md:mx-0">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+                <div class="lg:col-span-7 space-y-6 text-gray-600 leading-relaxed text-lg">
+                    <p>
+                       <b>Full Stack PHP Developer</b> with hands-on experience building responsive web <br> applications and management systems using <b>PHP, MySQL, JavaScript, Bootstrap,</b> and <br>  <b>Tailwind CSS</b>. Skilled in frontend and backend development, authentication systems, <br> admin dashboards, and database management. Passionate about solving real-world problems through clean and efficient code.
+                    </p>
+
+                    <div class="pt-6">
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">Core Strengths</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-lg text-sm font-medium border border-indigo-100 transition-all hover:bg-indigo-600 hover:text-white cursor-default"data-aos="fade-right"
+     data-aos-offset="200"
+     data-aos-easing="ease-in-sine">Team
+                                Work</span>
+                            <span
+                                class="px-4 py-2 bg-purple-50 text-purple-700 rounded-lg text-sm font-medium border border-purple-100 transition-all hover:bg-purple-600 hover:text-white cursor-default"data-aos="fade-right"
+     data-aos-offset="200"
+     data-aos-easing="ease-in-sine">Fast
+                                Learner</span>
+                            <span
+                                class="px-4 py-2 bg-pink-50 text-pink-700 rounded-lg text-sm font-medium border border-pink-100 transition-all hover:bg-pink-600 hover:text-white cursor-default"data-aos="fade-right"
+     data-aos-offset="200"
+     data-aos-easing="ease-in-sine">Problem
+                                Solver</span>
+                            <span
+                                class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium border border-blue-100 transition-all hover:bg-blue-600 hover:text-white cursor-default"data-aos="fade-right"
+     data-aos-offset="200"
+     data-aos-easing="ease-in-sine">Smart
+                                Work</span>
+                            <span
+                                class="px-4 py-2 bg-teal-50 text-teal-700 rounded-lg text-sm font-medium border border-teal-100 transition-all hover:bg-teal-600 hover:text-white cursor-default"data-aos="fade-right"
+     data-aos-offset="200"
+     data-aos-easing="ease-in-sine">Time
+                                Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative"data-aos="flip-right">
+                    <div
+                        class="absolute -inset-4 bg-gradient-to-tr from-indigo-100 to-purple-100 rounded-3xl blur-2xl opacity-50">
+                    </div>
+                    <div class="relative bg-white border border-gray-100 p-8 rounded-3xl shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Professional Impact</h3>
+
+                        <div class="space-y-8">
+                            <div class="flex items-center gap-6 group">
+                                <div
+                                    class="w-14 h-14 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-indigo-200 group-hover:scale-110 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-3xl font-bold text-gray-900">5+</div>
+                                    <div class="text-sm text-gray-500 uppercase tracking-wide">Projects Completed</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-6 group">
+                                <div
+                                    class="w-14 h-14 bg-purple-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-purple-200 group-hover:scale-110 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-3xl font-bold text-gray-900">6th Months</div>
+                                    <div class="text-sm text-gray-500 uppercase tracking-wide"> Experience</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-6 group">
+                                <div
+                                    class="w-14 h-14 bg-pink-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-pink-200 group-hover:scale-110 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-3xl font-bold text-gray-900">2 Awards</div>
+                                    <div class="text-sm text-gray-500 uppercase tracking-wide">Star Performance</div>
+                                </div>
+                            </div>
+                        </div>
+                         <a href="images/pradum resume.docx" download="Pradum_Gaun_Resume.pdf">
+                              <button
+                            class="w-full mt-10 py-4 bg-gray-950 text-white rounded-2xl font-bold hover:bg-gray-800 transition-all shadow-lg hover:-translate-y-1">
+                            Download Resume
+                              </button>
+                         </a>
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- SKILLS SECTION -->
+    <section id="Skills" class="relative py-24  overflow-hidden">
+
+        <div
+            class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-72 h-72 bg-indigo-100 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Technical <span
+                        class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Expertise</span>
+                </h2>
+                <div class="w-24 h-1.5 bg-indigo-600 mx-auto rounded-full"></div>
+                <p class="mt-6 text-gray-500 max-w-xl mx-auto text-lg">
+                    A diverse set of skills acquired through 45+ projects, ranging from frontend aesthetics to robust
+                    backend architecture.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+
+
+                <div
+                    class="group relative bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center overflow-hidden"data-aos="zoom-in">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-yellow-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <img src="/images/js.jpeg" alt="JS"
+                        class="relative w-16 h-16 object-contain mb-4 filter grayscale group-hover:grayscale-0 transition-all">
+                    <span class="relative font-semibold text-gray-700 group-hover:text-yellow-600">JavaScript</span>
+                </div>
+
+                <div
+                    class="group relative bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center overflow-hidden"data-aos="zoom-in">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-purple-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <img src="/images/php.jpeg" alt="PHP"
+                        class="relative w-16 h-16 object-contain mb-4 filter grayscale group-hover:grayscale-0 transition-all">
+                    <span class="relative font-semibold text-gray-700 group-hover:text-purple-600">PHP</span>
+                </div>
+
+              
+
+                <div
+                    class="group relative bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center overflow-hidden"data-aos="zoom-in">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-gray-100 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <img src="/images/github.jpg" alt="GitHub"
+                        class="relative w-16 h-16 object-contain mb-4 filter grayscale group-hover:grayscale-0 transition-all">
+                    <span class="relative font-semibold text-gray-700 group-hover:text-black">GitHub</span>
+                </div>
+                <div
+                    class="group relative bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center overflow-hidden"data-aos="zoom-in">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-gray-100 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <img src="/images/boot.jpg" alt="GitHub"
+                        class="relative w-16 h-16 object-contain mb-4 filter grayscale group-hover:grayscale-0 transition-all">
+                    <span class="relative font-semibold text-gray-700 group-hover:text-black">Bootstrap</span>
+                </div>
+                <div
+                    class="group relative bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center overflow-hidden"data-aos="zoom-in">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-gray-100 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <img src="/images/tail.jpg" alt="GitHub"
+                        class="relative w-16 h-16 object-contain mb-4 filter grayscale group-hover:grayscale-0 transition-all">
+                    <span class="relative font-semibold text-gray-700 group-hover:text-black">Tailwind</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--SERVICES SECTION -->
+    <section id="my-services" class="relative py-24  overflow-hidden">
+
+        <div class="absolute top-0 left-1/4 w-64 h-64 bg-indigo-50 rounded-full blur-3xl opacity-60"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                    My <span
+                        class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Services</span>
+                </h2>
+                <div class="w-20 h-1.5 bg-gray-900 mx-auto rounded-full"></div>
+                <p class="mt-6 text-gray-500 max-w-2xl mx-auto text-lg">
+                    Providing end-to-end digital solutions, from conceptualizing the user experience to building robust
+                    backend architectures.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div
+                    class="group relative p-1 rounded-3xl bg-gradient-to-b from-gray-100 to-white hover:from-indigo-500 hover:to-purple-600 transition-all duration-500 shadow-sm hover:shadow-2xl hover:shadow-indigo-200">
+                    <div class="bg-white p-10 rounded-[calc(1.5rem-1px)] h-full transition-all"data-aos="zoom-out-down">
+                        <div class="flex justify-between items-start mb-8">
+                            <div
+                                class="p-3 bg-indigo-50 text-indigo-600 rounded-2xl group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-6xl font-black text-gray-300 group-hover:text-indigo-50 transition-colors duration-300">01</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Web Development</h3>
+                        <p class="text-gray-600 leading-relaxed group-hover:text-gray-700">
+                            I craft high-performance, responsive websites using React and Tailwind CSS, focusing on
+                            speed, SEO, and flawless user interaction.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative p-1 rounded-3xl bg-gradient-to-b from-gray-100 to-white hover:from-purple-500 hover:to-pink-600 transition-all duration-500 shadow-sm hover:shadow-2xl hover:shadow-purple-200">
+                    <div class="bg-white p-10 rounded-[calc(1.5rem-1px)] h-full transition-all"data-aos="zoom-out-down">
+                        <div class="flex justify-between items-start mb-8">
+                            <div
+                                class="p-3 bg-purple-50 text-purple-600 rounded-2xl group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-6xl font-black text-gray-300 group-hover:text-purple-50 transition-colors duration-300">02</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Backend Systems</h3>
+                        <p class="text-gray-600 leading-relaxed group-hover:text-gray-700">
+                            Building secure and scalable server-side architectures using Node.js and PHP. I ensure your
+                            data is safe and your APIs are lightning fast.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative p-1 rounded-3xl bg-gradient-to-b from-gray-100 to-white hover:from-pink-500 hover:to-orange-500 transition-all duration-500 shadow-sm hover:shadow-2xl hover:shadow-pink-200">
+                    <div class="bg-white p-10 rounded-[calc(1.5rem-1px)] h-full transition-all"data-aos="zoom-out-down">
+                        <div class="flex justify-between items-start mb-8">
+                            <div
+                                class="p-3 bg-pink-50 text-pink-600 rounded-2xl group-hover:bg-pink-600 group-hover:text-white transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-6xl font-black text-gray-300 group-hover:text-pink-50 transition-colors duration-300">03</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Product Strategy</h3>
+                        <p class="text-gray-600 leading-relaxed group-hover:text-gray-700">
+                            From wireframing to deployment, I help businesses turn ideas into fully functional digital
+                            products with a focus on UX/UI.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- PROJECTS -->
+    <section id="latest-projects" class="relative py-24 ">
+
+        <div class="relative max-w-7xl mx-auto px-6">
+
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="text-left">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                        Featured <span class="text-indigo-600">Projects</span>
+                    </h2>
+                    <div class="w-20 h-1.5 bg-indigo-600 rounded-full"></div>
+                </div>
+                <p class="text-gray-500 max-w-md text-lg italic">
+                    "Design is not just what it looks like and feels like. Design is how it works."
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://cdn.stocksnap.io/img-thumbs/280h/abstract-background_DKNZ1YUOBT.jpg" alt="KicksCart"
+                            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
+                            <div class="translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
+                                <span
+                                    class="inline-block px-3 py-1 mb-3 text-xs font-semibold tracking-wider text-indigo-400 uppercase bg-indigo-400/10 border border-indigo-400/20 rounded-full">E-Commerce</span>
+                                <h3 class="text-2xl font-bold text-white mb-2">Fresh Blooms </h3>
+                                <p class="text-gray-300 text-sm mb-6">Bring home nature’s beauty with fresh flowers for every occasion. ✨</p>
+                                <a href="https://bloom-theta-five.vercel.app/"
+                                    class="inline-flex items-center text-white font-semibold hover:text-indigo-400 transition-colors">
+                                    View Project
+                                    <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="/images/UDAAN.jpg" alt="Udaan Foundation"
+                            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-indigo-900/90 via-indigo-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
+                            <div class="translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
+                                <span
+                                    class="inline-block px-3 py-1 mb-3 text-xs font-semibold tracking-wider text-black-400 uppercase bg-purple-400/10 border border-purple-400/20 rounded-full">Non-Profit</span>
+                                <h3 class="text-2xl font-bold text-white mb-2">Udaan Foundation</h3>
+                                <p class="text-gray-300 text-sm mb-6">Full-scale website for a non-profit organization
+                                    focused on social impact.</p>
+                                <a href="https://foundation-zei1.vercel.app"
+                                    class="inline-flex items-center text-white font-semibold hover:text-purple-400 transition-colors">
+                                    View Project
+                                    <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="/images/FITNESS.png" alt="Fitness Website"
+                            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-pink-900/90 via-pink-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
+                            <div class="translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
+                                <span
+                                    class="inline-block px-3 py-1 mb-3 text-xs font-semibold tracking-wider text-pink-400 uppercase bg-pink-400/10 border border-pink-400/20 rounded-full">Health
+                                    & Fitness</span>
+                                <h3 class="text-2xl font-bold text-white mb-2">PowerFit Platform</h3>
+                                <p class="text-gray-300 text-sm mb-6">Interactive fitness tracking dashboard with
+                                    real-time data visualization.</p>
+                                <a href="https://gym-seven-iota-80.vercel.app"
+                                    class="inline-flex items-center text-white font-semibold hover:text-pink-400 transition-colors">
+                                    View Project
+                                    <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-20 text-center">
+                <a href="https://github.com/" target="_blank"
+                    class="inline-flex items-center px-8 py-4 border-2 border-gray-900 text-gray-900 font-bold rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 group">
+                    Explore More on GitHub
+                    <span class="ml-3 transition-transform group-hover:rotate-45">↗</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- CONTACT ME -->
+    <section id="contact-us" class="relative py-24  overflow-hidden">
+
+        <div
+            class="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-indigo-50 rounded-full blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                    Get In <span
+                        class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Touch</span>
+                </h2>
+                <div class="w-20 h-1.5 bg-gray-900 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+                <div class="lg:col-span-5 space-y-12">
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-6">Let's Talk</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            Have a project in mind or just want to say hi? I'm always open to discussing new projects,
+                            creative ideas, or opportunities to be part of your visions.
+                        </p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="group flex items-center gap-6">
+                            <div
+                                class="w-14 h-14 flex items-center justify-center bg-indigo-50 text-indigo-600 rounded-2xl group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest">Email
+                                    Me</span>
+                                <a href="mailto:pradumgaun1611@gmail.com"
+                                    class="text-xl font-bold text-gray-900 hover:text-indigo-600 transition-colors">pradumgaun1611@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="group flex items-center gap-6">
+                            <div
+                                class="w-14 h-14 flex items-center justify-center bg-purple-50 text-purple-600 rounded-2xl group-hover:bg-purple-600 group-hover:text-white transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest">Visit
+                                    Me</span>
+                                <strong class="text-xl font-bold text-gray-900">Aliganj, Lucknow</strong>
+                            </div>
+                        </div>
+
+                        <div class="group flex items-center gap-6">
+                            <div
+                                class="w-14 h-14 flex items-center justify-center bg-pink-50 text-pink-600 rounded-2xl group-hover:bg-pink-600 group-hover:text-white transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest">Call
+                                    Me</span>
+                                <a href="tel:+918576930823"
+                                    class="text-xl font-bold text-gray-900 hover:text-pink-600 transition-colors">+91
+                                    8576930823</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div
+                        class="bg-gray-50 p-8 md:p-12 rounded-3xl border border-gray-100 shadow-2xl shadow-gray-200/50">
+                        <form action="#" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-gray-700 ml-1">Full Name</label>
+                                    <input type="text" placeholder="Enter your full name" required
+                                        class="w-full px-6 py-4 bg-white text-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-gray-700 ml-1">Email Address</label>
+                                    <input type="email" placeholder="hello@example.com" required
+                                        class="w-full px-6 py-4 bg-white text-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-gray-700 ml-1">Message</label>
+                                <textarea rows="5" placeholder="Tell me about your project..."
+                                    class="w-full px-6 py-4 bg-white text-gray-500 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all resize-none"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full py-5 bg-gray-950 text-white rounded-2xl font-bold text-lg hover:bg-indigo-600 transition-all duration-300 shadow-xl shadow-indigo-100 hover:shadow-indigo-200 hover:-translate-y-1">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="bg-black flex justify-around items-center h-20">
+        <div class="copyright">Copyright © 2025 Pradum Gaun. All Rights Reserved.</div>
+        <div class="designed">Designed by Pradum Gaun ❤️</div>
+    </footer>
+    <!-- aos js link -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
